@@ -1,0 +1,44 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+int contains(int m[], int size, int number) {
+	for (int i = 0; i < size; i++) {
+		if (m[i] == number) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+
+ main() {
+	srand(time(NULL));
+	int m[100];
+	int t[100];
+	int l = 0;
+	for (int i = 0; i < 100; i++) {
+		m[i] = rand() % 100;
+	}
+
+	
+	for (int i = 0; i < 100; i++) {
+		if (contains(t, l, m[i]) == 0) {
+			t[l] = m[i];
+			l++;
+		}
+	}
+	for (int i = 0; i < 100; i++) {
+		printf("%02d ", m[i]);
+	}
+	printf("\n\n");
+	for (int i = 0; i < l; i++) {
+		printf("%02d ", t[i]);
+	}
+
+	getchar();
+
+	}
+avigot masivi ! shevavasot rand ricxv da gamovitanot ekranze unikaluri ircxvebi!
